@@ -20,7 +20,7 @@ class Agent:
         
     @staticmethod
     def get_total_agents():
-        print(Agent.total_agents)
+        return Agent.total_agents
     
 class Mission:
     def __init__(self, mission_name: str, target_location: str, assigned_agent: Agent):
@@ -38,7 +38,7 @@ class FieldAgent(Agent):
     
     def report(self):
         super().report()
-        print(self.region)
+        print(f'Region: {self.region}')
     
 # f = FieldAgent("shay", "open", "israel")
 # f.report()
@@ -48,18 +48,18 @@ class CyberAgent(Agent):
     specialty = None
     def __init__(self, code_name ):
         super().__init__(code_name)
-        CyberAgent.specialty = "Hack"
+        CyberAgent.specialty = "hacking"
         
     def report(self):
         super().report()
-        return self.specialty
+        print(f'specialty: {self.specialty}')
     
 agent = [FieldAgent("Haim", "Gaza"), CyberAgent("shay"), CyberAgent("David") ]
 for i in agent:
     i.set_clearance_level(randint(1, 10))
-    print(i.report())
+    i.report()
 
-Agent.get_total_agents()
+print("total agents:", Agent.get_total_agents())
 
 # class AgencyDirector:
     
