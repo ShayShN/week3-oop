@@ -68,12 +68,16 @@
         
 
 # class Square(Shape):
-#     def __init__(self, height, base):
+#     def __init__(self, height):
 #         self.height = height
-#         self.base = base
     
 #     def area(self):
-#         return self.height * self.base
+#         return self.height * self.height
         
         
 
+ 
+        
+        
+             
+     
